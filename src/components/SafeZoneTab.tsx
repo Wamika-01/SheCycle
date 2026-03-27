@@ -1,5 +1,8 @@
 import { Shield, Phone, MapPin, Navigation, AlertCircle, CheckCircle, Camera, Clock } from 'lucide-react';
 import { safeZones, emergencyContacts, safetyTips } from '../data/mockData';
+const openMap = (lat: number, lng: number) => {
+  window.open(`https://www.google.com/maps/search/?api=1&query=${lat},${lng}`);
+};
 
 const SafeZoneTab = () => {
   return (
@@ -98,10 +101,13 @@ const SafeZoneTab = () => {
               <p className="font-semibold text-sage-800">{zone.type}</p>
             </div>
 
-            <button className="w-full bg-gradient-to-r from-sage-500 to-sage-600 text-white px-4 py-3 rounded-xl font-semibold shadow-md hover:shadow-lg transition-all transform hover:scale-105 flex items-center justify-center gap-2">
-              <Navigation size={18} />
-              Navigate to SafeZone
-            </button>
+<button
+  onClick={() => openMap(zone.lat, zone.lng)}
+  className="w-full bg-gradient-to-r from-sage-500 to-sage-600 text-white px-4 py-3 rounded-xl font-semibold shadow-md hover:shadow-lg transition-all transform hover:scale-105 flex items-center justify-center gap-2"
+>
+  <Navigation size={18} />
+  Navigate to SafeZone
+</button>
           </div>
         ))}
       </div>
