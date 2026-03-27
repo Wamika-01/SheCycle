@@ -164,7 +164,6 @@ export const safeZones: SafeZone[] = [
     lat: 31.3260,
   lng: 75.5762,
 mapLink: "https://www.google.com/maps/place/P.+A.+P.+Marriage+Palace/@31.3121102,75.6121135,17z/data=!3m1!4b1!4m6!3m5!1s0x391a5b384e7d49b7:0x17dd9e56d240c794!8m2!3d31.3121102!4d75.6146884!16s%2Fg%2F11ffvh6rcv?entry=ttu"
-}
   },
   {
     id: '2',
